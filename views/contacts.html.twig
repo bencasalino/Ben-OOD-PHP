@@ -1,10 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-      <!--  boostrap3 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+
     <title>Ben's Address Book</title>
   </head>
   <body>
+      <div class="contianer-fluid">
     <h1>Ben's Address Book</h1>
     <!--  if statement checks to see if there are already contacts, if that is true than list those contacts -->
     {% if contacts is not empty %}
@@ -40,5 +48,7 @@
 <!--  delete contacts button -->
         <button type='submit'>Delete all contacts</button>
       </form>
+  </div>
+
   </body>
 </html>

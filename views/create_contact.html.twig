@@ -1,8 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+
     <title>Ben's Address Book</title>
   </head>
   <body>
+      <div class="container-fulid">
     <h1>You've added the following contact:</h1>
     <!--  twig new contact -->
     <p>{{ new_contact.getName }}</p>
@@ -13,5 +23,6 @@
       <li>{{ new_contact.getAddress }}</li>
     </ul>
     <p><a href='/'>View ALL the contacts!! </a></p>
+</div>
   </body>
 </html>

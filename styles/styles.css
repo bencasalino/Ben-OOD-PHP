@@ -1,0 +1,10 @@
+body , html, p , div {
+    margin-left: 25%;
+    margin-right: 25%;
+        color: red;
+}
+
+
+p {
+    color: red;
+}
