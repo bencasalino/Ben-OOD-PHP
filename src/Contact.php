@@ -54,7 +54,7 @@
     {
       return $_SESSION['list_of_contacts'];
     }
-//sets list_of_contacts to a blank array, this deletes all of the contents 
+//sets list_of_contacts to a blank array, this deletes all of the contents
     static function deleteAll()
     {
       $_SESSION['list_of_contacts'] = array();

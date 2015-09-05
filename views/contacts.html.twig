@@ -23,6 +23,7 @@
     <h3>You have no contacts yet! Please fill out this from!</h3>
     {% endif %}
 <!-- this is the form that will post the new contact information  -->
+<!--  referes to the contacts / home page -->
       <form action='/contacts' method='post'>
         <div class='form-group'>
           <label for='name'>Contact name:</label>
@@ -34,6 +35,7 @@
         </div>
         <button type='submit' class='btn'>Submit!</button>
       </form>
+      <!--  refers to the delete contacts page -->
       <form action='/delete_contacts' method='post'>
 <!--  delete contacts button -->
         <button type='submit'>Delete all contacts</button>
