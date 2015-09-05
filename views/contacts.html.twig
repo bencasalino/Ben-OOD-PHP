@@ -12,8 +12,11 @@
     <title>Ben's Address Book</title>
   </head>
   <body>
-      <div class="contianer-fluid">
+      <div align="center">
     <h1>Ben's Address Book</h1>
+    <hr> </div>
+
+
     <!--  if statement checks to see if there are already contacts, if that is true than list those contacts -->
     {% if contacts is not empty %}
       <h3>Here are a list of your contacts:</h3>
@@ -28,27 +31,54 @@
       </ul>
     {% else %}
     <!--  else statement will display this message if no contacts inputted yet -->
-    <h3>You have no contacts yet! Please fill out this from!</h3>
+    <div align="center">
+    <h3>You have no contacts, to add a new contact fill out the form below!</h3>
     {% endif %}
+</div>
 <!-- this is the form that will post the new contact information  -->
 <!--  referes to the contacts / home page -->
       <form action='/contacts' method='post'>
         <div class='form-group'>
           <label for='name'>Contact name:</label>
-          <input id='name' name='name' class='form-control' type='text'>
+          <input id='name'
+                 name='name'
+                 class='form-control'
+                 type='text'
+                 maxlength="20"
+                 placeholder="First and Last Name"
+                 required>
+                 <br>
           <label for='phone_number'>Contact phone number:</label>
-          <input id='phone_number' name='phone_number' class='form-control' type='text'>
+          <input id='phone_number'
+                 name='phone_number'
+                 class='form-control'
+                 type='text'
+                 maxlength="10"
+                 placeholder="123-456-7890"
+                 required>
+                 <br>
           <label for='address'>Contact address:</label>
-          <input id='address' name='address' class='form-control' type='text'>
-        </div>
-        <button type='submit' class='btn'>Submit!</button>
+          <input id='address'
+                 name='address'
+                 class='form-control'
+                 type='text'
+                 maxlength="20"
+                 placeholder="123 NW Ave. Portland, OR 97209"
+                 required>
+                 <br>
+
+         <button type="button" class="btn btn-lg btn-success">Submit!</button>
       </form>
+
       <!--  refers to the delete contacts page -->
-      <form action='/delete_contacts' method='post'>
-<!--  delete contacts button -->
-        <button type='submit'>Delete all contacts</button>
+ <div>  <form action='/delete_contacts' method='post'> <br>
+
+          <!--  delete contacts button -->
+         <button type="button" class="btn btn-lg btn-danger">Delete all contacts</button> </p>
+         <hr>
       </form>
   </div>
+  </div> </div>
 
   </body>
 </html>

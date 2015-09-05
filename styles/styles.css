@@ -1,10 +1,21 @@
-body , html, p , div {
-    margin-left: 25%;
-    margin-right: 25%;
-        color: red;
+html, body, p, a, form, div {
+    color: blue;
+    background-color: yellow;
+}
+
+.html {
+    color: blue;
+    background-color: yellow;
+}
+
+#html {
+    color: blue;
+    background-color: yellow;
 }
 
 
-p {
-    color: red;
+
+container-fluid {
+    padding-left: 25%;
+    padding-right: 25%;
 }
