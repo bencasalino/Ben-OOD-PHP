@@ -1,0 +1,42 @@
+<html>
+  <head>
+      <!--  boostrap3 -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <title>Ben's Address Book</title>
+  </head>
+  <body>
+    <h1>Ben's Address Book</h1>
+    <!--  if statement checks to see if there are already contacts, if that is true than list those contacts -->
+    {% if contacts is not empty %}
+      <h3>Here are a list of your contacts:</h3>
+      <ul>
+        {% for contact in contacts %}
+        <li>{{ contact.getName }}</li>
+        <ul>
+          <li>{{ contact.getPhoneNumber }}</li>
+          <li>{{ contact.getAddress }}</li>
+        </ul>
+        {% endfor %}
+      </ul>
+    {% else %}
+    <!--  else statement will display this message if no contacts inputted yet -->
+    <h3>You have no contacts yet! Please fill out this from!</h3>
+    {% endif %}
+<!-- this is the form that will post the new contact information  -->
+      <form action='/contacts' method='post'>
+        <div class='form-group'>
+          <label for='name'>Contact name:</label>
+          <input id='name' name='name' class='form-control' type='text'>
+          <label for='phone_number'>Contact phone number:</label>
+          <input id='phone_number' name='phone_number' class='form-control' type='text'>
+          <label for='address'>Contact address:</label>
+          <input id='address' name='address' class='form-control' type='text'>
+        </div>
+        <button type='submit' class='btn'>Submit!</button>
+      </form>
+      <form action='/delete_contacts' method='post'>
+<!--  delete contacts button -->
+        <button type='submit'>Delete all contacts</button>
+      </form>
+  </body>
+</html>

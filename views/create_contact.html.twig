@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Ben's Address Book</title>
+  </head>
+  <body>
+    <h1>You've added the following contact:</h1>
+    <!--  twig new contact -->
+    <p>{{ new_contact.getName }}</p>
+    <ul>
+        <!--  twig phone-->
+      <li>{{ new_contact.getPhoneNumber }}</li>
+      <!--  twig address-->
+      <li>{{ new_contact.getAddress }}</li>
+    </ul>
+    <p><a href='/'>View ALL the contacts!! </a></p>
+  </body>
+</html>
