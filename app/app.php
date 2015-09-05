@@ -3,7 +3,7 @@
     //App dependencies
     require_once __DIR__."/../vendor/autoload.php";
     // dependency needed for each Class, etc.
-    // require_once __DIR__."/../src/Class1.php";
+    require_once __DIR__."/../src/Class1.php";
     // require_once __DIR__."/../src/Class2.php";
 
     // Tells the app to use Silex Application
@@ -21,8 +21,8 @@
     // ));
 
     //Still not sure what this does, think it has something to with Symfony being part of the composer package download list. Seems like it Symfony is used to override method paramaters in HTTP?
-    // use Symfony\Component\HttpFoundation\Request;
-    // Request::enableHttpMethodParameterOverride();
+    use Symfony\Component\HttpFoundation\Request;
+    Request::enableHttpMethodParameterOverride();
 
     //Path to homepage
     //C[R]UD, Read, get
@@ -32,7 +32,7 @@
     // });
 
  $app->get("/", function(){
-return "hello world";
+return "helloooooooo world";
 
 
 });
